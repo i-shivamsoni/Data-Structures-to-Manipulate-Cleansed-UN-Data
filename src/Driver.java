@@ -56,11 +56,13 @@ public class Driver {
         LinkedList<Commodity> linkListCommodities = new LinkedList<Commodity>();
         Stack<Commodity> stackCommodities = new Stack<Commodity>();
         Queue<Commodity> queueCommodities = new LinkedList<Commodity>();
+        Hashtable<Commodity, Commodity> tableCommodities = new Hashtable<Commodity, Commodity>();
         for(int i = 0; i < SIZEOFINPUT; i++) {
         	arrListCommodities.add(commodities[i]);
         	linkListCommodities.add(commodities[i]);	
         	stackCommodities.add(commodities[i]);
         	queueCommodities.add(commodities[i]);
+        	tableCommodities.put(commodities[i], commodities[i]);
         }
         Collections.sort(arrListCommodities);
         Collections.sort(linkListCommodities);
@@ -84,7 +86,10 @@ public class Driver {
         System.out.println(queueCommodities.contains(commodities[random]));
         System.out.println(Collections.max(queueCommodities));
         
-        System.out.println("DONE!");
+        System.out.println(tableCommodities.contains(commodities[random]));
+        System.out.println(tableCommodities.remove(commodities[random]));
+        
+        System.out.println("DONE!"); 
         
 	}
 
