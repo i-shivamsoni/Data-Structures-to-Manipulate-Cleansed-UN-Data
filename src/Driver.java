@@ -54,12 +54,15 @@ public class Driver {
         }
         ArrayList<Commodity> arrListCommodities = new ArrayList<Commodity>();
         LinkedList<Commodity> linkListCommodities = new LinkedList<Commodity>();
+        Stack<Commodity> stackCommodities = new Stack<Commodity>(); 
         for(int i = 0; i < SIZEOFINPUT; i++) {
         	arrListCommodities.add(commodities[i]);
         	linkListCommodities.add(commodities[i]);	
+        	stackCommodities.add(commodities[i]);
         }
         Collections.sort(arrListCommodities);
         Collections.sort(linkListCommodities);
+        Collections.sort(stackCommodities);
         Arrays.sort(commodities);
         int random = (int) (Math.random() * SIZEOFINPUT);
         System.out.println(arrListCommodities.contains(commodities[random]));   
@@ -69,6 +72,10 @@ public class Driver {
         System.out.println(linkListCommodities.contains(commodities[random]));   
         System.out.println(linkListCommodities.contains(commodities[random]));
         System.out.println(Collections.max(linkListCommodities));
+        
+        System.out.println(stackCommodities.contains(commodities[random]));   
+        System.out.println(stackCommodities.contains(commodities[random]));
+        System.out.println(Collections.max(stackCommodities));
         System.out.println("DONE!");
         
 	}
