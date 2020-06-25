@@ -52,9 +52,16 @@ public class Driver {
 	        }
 	        
         }
-        Arrays.sort(commodities);
+        ArrayList<Commodity> arrListCommodities = new ArrayList<Commodity>();
         for(int i = 0; i < SIZEOFINPUT; i++) {
+        	arrListCommodities.add(commodities[i]);
         }
+        Collections.sort(arrListCommodities);
+        Arrays.sort(commodities);
+        int random = (int) (Math.random() * SIZEOFINPUT);
+        System.out.println(arrListCommodities.contains(commodities[random]));   
+        System.out.println(arrListCommodities.contains(commodities[random]));
+        System.out.println(Collections.max(arrListCommodities));
         System.out.println("DONE!");
         
 	}
