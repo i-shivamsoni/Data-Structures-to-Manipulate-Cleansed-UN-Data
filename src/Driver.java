@@ -52,6 +52,7 @@ public class Driver {
 	        }
 	        
         }
+        Arrays.sort(commodities);
         for(int i = 0; i < SIZEOFINPUT; i++) {
         }
         System.out.println("DONE!");
