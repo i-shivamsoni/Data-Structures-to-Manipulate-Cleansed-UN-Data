@@ -89,8 +89,13 @@ public class Driver {
         System.out.println(tableCommodities.contains(commodities[random]));
         System.out.println(tableCommodities.remove(commodities[random]));
         
-        System.out.println("DONE!"); 
-        
+        Collections.shuffle(arrListCommodities);
+        Collections.copy(arrListCommodities, new ArrayList<Commodity>());
+        Collections.reverse(arrListCommodities);
+        System.out.println(arrListCommodities.size());
+        Collections.frequency(arrListCommodities, arrListCommodities.get((int) Math.random() * 100 ));
+        arrListCommodities.clear();
+        System.out.println("DONE!");
 	}
 
 }
